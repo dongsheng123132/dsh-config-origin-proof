@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+import { inspectConfigOrigin, verifyConfigOrigin } from '../lib/config-origin-proof.mjs'
+const [command, ...rest] = process.argv.slice(2); const args = {}; for (let i = 0; i < rest.length; i += 2) if (rest[i]?.startsWith('--')) args[rest[i].slice(2)] = rest[i + 1]
+const common = { workspaceRoot: args['workspace-root'] ?? process.cwd(), recordingPath: args.recording, artifactDir: args['artifact-dir'] }
+try { let result; if (command === 'inspect' && common.recordingPath) result = await inspectConfigOrigin(common); else if (command === 'verify' && common.recordingPath && common.artifactDir) result = await verifyConfigOrigin(common); else { process.stderr.write('Usage: dsh-config-origin-proof inspect|verify --workspace-root DIR --recording FILE [--artifact-dir DIR]\n'); process.exitCode = 1 } if (result) { process.stdout.write(`${JSON.stringify(result)}\n`); if (command === 'verify' && result.status !== 'verified') process.exitCode = 2 } } catch (error) { process.stderr.write(`${JSON.stringify({ ok: false, code: error.code ?? 'ERROR', error: error.message })}\n`); process.exitCode = 1 }

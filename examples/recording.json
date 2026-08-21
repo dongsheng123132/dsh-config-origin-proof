@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "subject": { "id": "web-search-provider", "revision": "dsh-47f9438" },
+  "sources": [
+    { "id": "explicit", "trust": "operator", "writable": false },
+    { "id": "user-settings", "trust": "user", "writable": true },
+    { "id": "composition", "trust": "composition", "writable": true },
+    { "id": "shell", "trust": "operator", "writable": false },
+    { "id": "project-env", "trust": "workspace", "writable": true },
+    { "id": "user-env", "trust": "user", "writable": true },
+    { "id": "default", "trust": "default", "writable": false },
+    { "id": "credential-store", "trust": "user", "writable": true }
+  ],
+  "orders": {
+    "non-secret": ["explicit", "user-settings", "composition", "shell", "project-env", "user-env", "default"],
+    "credential-reference": ["shell", "credential-store", "project-env", "user-env"]
+  },
+  "claims": [
+    {
+      "claimId": "search-provider-id",
+      "domain": "non-secret",
+      "observations": [
+        { "sourceId": "explicit", "status": "absent" },
+        { "sourceId": "user-settings", "status": "present", "valueSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" },
+        { "sourceId": "composition", "status": "present", "valueSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }
+      ],
+      "expectedWinnerSourceId": "user-settings",
+      "expectedValueSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    }
+  ]
+}

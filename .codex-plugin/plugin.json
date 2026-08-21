@@ -1,0 +1,18 @@
+{
+  "name": "dsh-config-origin-proof",
+  "version": "0.1.0",
+  "description": "Content-addressed evidence for DSH configuration winners and shadowed sources",
+  "author": {
+    "name": "hfshfg"
+  },
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "DSH Config Origin Proof",
+    "shortDescription": "Verify which configuration source won.",
+    "longDescription": "Verifies explicit, value-redacted DSH configuration-origin recordings, precedence domains, winning sources, shadowed layers and content-addressed evidence without reading live credentials.",
+    "developerName": "hfshfg",
+    "category": "Developer Tools",
+    "capabilities": ["Configuration origin evidence", "Shadowed-source disclosure", "Content-addressed reports"],
+    "defaultPrompt": ["Verify this redacted DSH configuration-origin recording."]
+  }
+}

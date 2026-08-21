@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "dsh-config-origin-proof": { "command": "node", "args": ["${pluginDir}/mcp-server.mjs"] }
+  }
+}
