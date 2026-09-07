@@ -1,6 +1,6 @@
 {
   "name": "dsh-config-origin-proof",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Content-addressed evidence for DSH configuration winners and shadowed sources",
   "author": {
     "name": "hfshfg"
@@ -12,7 +12,13 @@
     "longDescription": "Verifies explicit, value-redacted DSH configuration-origin recordings, precedence domains, winning sources, shadowed layers and content-addressed evidence without reading live credentials.",
     "developerName": "hfshfg",
     "category": "Developer Tools",
-    "capabilities": ["Configuration origin evidence", "Shadowed-source disclosure", "Content-addressed reports"],
-    "defaultPrompt": ["Verify this redacted DSH configuration-origin recording."]
+    "capabilities": [
+      "Configuration origin evidence",
+      "Shadowed-source disclosure",
+      "Content-addressed reports"
+    ],
+    "defaultPrompt": [
+      "Verify this redacted DSH configuration-origin recording."
+    ]
   }
 }

@@ -1,16 +1,66 @@
 {
   "name": "dsh-config-origin-proof",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Content-addressed evidence for DSH configuration winners and shadowed sources",
   "license": "MIT",
   "type": "module",
   "main": "./index.js",
-  "exports": { ".": "./index.js", "./proof": "./lib/config-origin-proof.mjs" },
-  "bin": { "dsh-config-origin-proof": "./bin/dsh-config-origin-proof.mjs" },
-  "files": [".codex-plugin/", ".mcp.json", "bin/", "cordis.patch.yml", "examples/recording.json", "index.js", "lib/", "mcp-server.mjs", "LICENSE", "README.md", "README.zh-CN.md", "SECURITY.md"],
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
-  "scripts": { "test": "node --test test/*.test.mjs", "check": "node scripts/check.mjs", "smoke:plugin": "node test/plugin-smoke.mjs", "smoke:mcp": "node test/mcp-smoke.mjs", "smoke:dsh": "node test/dsh-runtime-smoke.mjs", "smoke:stock-web": "node test/stock-web-loader-smoke.mjs" },
-  "engines": { "node": ">=22" },
-  "repository": { "type": "git", "url": "git+https://github.com/dongsheng123132/dsh-config-origin-proof.git" },
-  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "configuration", "provenance", "evidence"]
+  "exports": {
+    ".": "./index.js",
+    "./proof": "./lib/config-origin-proof.mjs"
+  },
+  "bin": {
+    "dsh-config-origin-proof": "./bin/dsh-config-origin-proof.mjs"
+  },
+  "files": [
+    ".codex-plugin/",
+    ".mcp.json",
+    "bin/",
+    "cordis.patch.yml",
+    "examples/recording.json",
+    "index.js",
+    "lib/",
+    "mcp-server.mjs",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "SECURITY.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": ">=0.1.2-alpha.4",
+      "node": ">=22",
+      "dshReleases": {
+        "0.1.2-alpha.4": "compatible",
+        "0.1.2-alpha.5": "compatible",
+        "0.1.2-rc.1": "compatible"
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "smoke:plugin": "node test/plugin-smoke.mjs",
+    "smoke:mcp": "node test/mcp-smoke.mjs",
+    "smoke:dsh": "node test/dsh-runtime-smoke.mjs",
+    "smoke:stock-web": "node test/stock-web-loader-smoke.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongsheng123132/dsh-config-origin-proof.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "configuration",
+    "provenance",
+    "evidence"
+  ]
 }
