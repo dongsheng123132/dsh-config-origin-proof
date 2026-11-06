@@ -1,6 +1,6 @@
 # DSH Config Origin Proof
 
-作者 / 维护者：贺去病（贺方升 / Dosen）· [hequbing.com](https://www.hequbing.com)
+作者 / 维护者：He Fangsheng (贺方升 / 贺去病; Dosen)· [hequbing.com](https://www.hequbing.com)
 
 面向 DeepSeek Harness 配置来源归属的证据层：验证一份显式、脱敏的来源记录，给出优先级域、各层观察、实际胜出来源、被遮蔽来源和值摘要，并在高优先级来源未观察时失败闭合。
 
