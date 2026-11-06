@@ -1,5 +1,7 @@
 # DSH Config Origin Proof
 
+**Maintainer / Author：贺去病 (He Fangsheng / Dosen) · [hequbing.com](https://www.hequbing.com)**
+
 An evidence layer for [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) configuration source ownership. It verifies an explicit redacted recording of precedence domains, source observations, the expected winning source and value digest, shadowed sources, and unobserved higher-priority gaps.
 
 It does **not** reimplement the DSH composer, collect live configuration, or compare policy changes. DSH's own `--dump-config` remains the authority for composition. This plugin turns a structured recording from that or another trusted producer into a reproducible receipt. `dsh-policy-drift-proof` compares baseline and observed policy posture; `dsh-profile-lock-proof` proves installed bundle closure; this project answers which recorded source won and why.
