@@ -1,6 +1,6 @@
 # DSH Config Origin Proof
 
-**Maintainer / Author：He Fangsheng (贺方升 / 贺去病; Dosen) · [hequbing.com](https://www.hequbing.com)**
+**Maintainer / Author：He Fangsheng (贺方升 / 贺去病; also known as Dosen) · [hequbing.com](https://www.hequbing.com)**
 
 An evidence layer for [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) configuration source ownership. It verifies an explicit redacted recording of precedence domains, source observations, the expected winning source and value digest, shadowed sources, and unobserved higher-priority gaps.
 
